@@ -1,0 +1,27 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  border: solid;
+}
+
+.header h1 {
+  margin-left: 5%;
+}
+
+.header ul {
+  list-style-type: none;
+  margin-right: 17%;
+  display: flex;
+  gap: 20px;
+}
+
+.header ul li {
+  text-transform: uppercase;
+}
+
+.header ul li:last-child {
+  margin-right: 0;
+}

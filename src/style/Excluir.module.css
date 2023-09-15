@@ -1,0 +1,41 @@
+/* ExcluirProdutos.module.css */
+.container {
+  text-align: center;
+  margin: 50px auto;
+  max-width: 600px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.produtoContainer {
+  margin-top: 20px;
+}
+
+.produtoImagem {
+  max-width: 100%;
+  height: auto;
+  margin-top: 10px;
+}
+
+.btnExcluir,
+.btnCancelar {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  font-size: 1.2rem;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.btnExcluir {
+  background-color: #000;
+  margin-right: 10px;
+}
+
+.btnCancelar {
+  background-color: #666;
+}

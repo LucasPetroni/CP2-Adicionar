@@ -1,0 +1,33 @@
+.footer {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  border: solid;
+  padding: 10px 10% 10px 10%;
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.left {
+  display: flex;
+}
+
+.left ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.left ul li {
+  margin-right: 20px;
+}
+
+.left ul li:last-child {
+  margin-right: 0;
+}
+
+.footer .right {
+  margin-left: auto;
+}

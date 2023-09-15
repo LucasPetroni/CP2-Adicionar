@@ -1,0 +1,21 @@
+.container {
+  margin-top: 5%;
+  text-align: center;
+  height: 66vh;
+}
+
+.container h1 {
+  font-size: 5rem;
+  color: hotpink;
+  -webkit-text-stroke: 2px black;
+}
+
+.container ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.container ul li {
+  font-size: 2rem;
+  margin: 10px 0;
+}

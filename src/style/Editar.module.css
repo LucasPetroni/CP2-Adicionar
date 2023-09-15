@@ -1,0 +1,48 @@
+/* EditarProdutos.module.css */
+
+.container {
+  text-align: center;
+  max-width: 600px;
+  margin: 50px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.formField {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.formField label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #000;
+}
+
+.formField input {
+  width: 100%;
+  padding-bottom: 4px;
+  padding-top: 4Q;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.btnEditar {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 1.2rem;
+  color: #fff;
+  background-color: #000;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btnEditar:hover {
+  background-color: #333;
+}
