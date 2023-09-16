@@ -28,3 +28,13 @@ export const ListaProdutos = [
     preco: 1500,
   },
 ];
+
+export function proximoIndice(){
+  let maiorId = 0;
+  ListaProdutos.forEach((prod) => {
+    if(prod.id > maiorId){
+      maiorId = prod.id;
+    }
+  })
+  return maiorId + 1;
+}

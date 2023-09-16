@@ -4,8 +4,6 @@ import { ListaProdutos } from "../../components/ListaProdutos";
 import styles from "../../style/Editar.module.css";
 
 export default function EditarProdutos() {
-  document.title = "Editar Produtos";
-
   //Utilizando redirecionamento de ROTAS com useNavigate()
   const navigate = useNavigate();
 
@@ -13,9 +11,32 @@ export default function EditarProdutos() {
   const { id } = useParams();
 
   //Filtrando o produto selecionado byId
-  const produtoFiltrado = ListaProdutos.filter(
+  let produtoFiltrado = ListaProdutos.filter(
     (item) => item.id === parseInt(id)
   )[0];
+
+  const criando = !produtoFiltrado;
+
+  // const criando = () => (id === proximoIndice());
+
+  document.title = criando ? "Criar Produto" : "Editar Poduto";
+
+  if (!produtoFiltrado) {
+    // const listaCopia =  [...ListaProdutos, {id: id}];
+    produtoFiltrado = {
+      id: parseInt(id),
+      nome: "",
+      desc: "",
+      img: "",
+      preco: null,
+    };
+
+    ListaProdutos.push(produtoFiltrado);
+
+    // produtoFiltrado = ListaProdutos.filter(
+    //   (item) => item.id === parseInt(id))
+    // ListaProdutos =
+  }
 
   //Utilizando HOOK useState()
 
@@ -28,6 +49,7 @@ export default function EditarProdutos() {
   });
 
   const handleChange = (event) => {
+    event.preventDefault();
     const { name, value } = event.target;
     setProduto({ ...produto, [name]: value });
   };
@@ -50,12 +72,12 @@ export default function EditarProdutos() {
 
   return (
     <div className={styles.container}>
-      <h1>Editar Produtos</h1>
+      <h1>{criando ? 'Criar Produto' : 'Editar Produto'}</h1>
 
       <div>
         <form onSubmit={handleSubmit}>
           <fieldset>
-            <legend>Produto Selecionado</legend>
+            <legend>{criando ? 'Novo Produto' : 'Produto Selecionado'}</legend>
             <div className={styles.formField}>
               <label htmlFor="idNome">Nome</label>
               <input
@@ -80,7 +102,7 @@ export default function EditarProdutos() {
               <label htmlFor="idImg">Imagem</label>
               <input
                 type="text"
-                name="Img"
+                name="img"
                 id="idImg"
                 onChange={handleChange}
                 value={produto.img}
@@ -97,7 +119,7 @@ export default function EditarProdutos() {
               />
             </div>
             <div>
-              <button className={styles.btnEditar}>EDITAR</button>
+              <button className={styles.btnEditar}>{criando?'CRIAR':'EDITAR'}</button>
             </div>
           </fieldset>
         </form>

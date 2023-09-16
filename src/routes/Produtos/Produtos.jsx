@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { ListaProdutos } from "../../components/ListaProdutos";
+import { ListaProdutos, proximoIndice } from "../../components/ListaProdutos";
 import { AiFillEdit as Editar } from "react-icons/ai";
 import { AiFillDelete as Excluir } from "react-icons/ai";
 import styles from "../../style/Produtos.module.css";
@@ -58,7 +58,9 @@ export default function Produtos() {
           ))}
         </tbody>
       </table>
-      <button className={styles.btnAdicionar}>Adicionar Produto</button>
+      <Link to={`/editar/produtos/${proximoIndice()}`}>
+      <button className={styles.btnAdicionar} >Adicionar Produto</button>
+      </Link>
     </div>
   );
 }
